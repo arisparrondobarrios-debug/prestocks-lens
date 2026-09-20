@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Read-only PreStocks premium and valuation monitor for the Solana ecosystem." />
+    <title>PreStocks Lens — Premium intelligence without the noise</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#"><span class="brand-dot"></span>PreStocks Lens</a>
+      <div class="source"><span id="source-state" data-state="snapshot">Loading official data…</span><button id="refresh" type="button">Refresh</button></div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">SOLANA · READ-ONLY MARKET INTELLIGENCE</p>
+          <h1>See the gap<br />before the trade.</h1>
+          <p class="lede">Compare token price with issuer mark price, surface valuation dislocations, and verify every mint. No wallet. No execution. No hidden score.</p>
+        </div>
+        <aside class="principle-card">
+          <p>Core signal</p>
+          <strong>(token price − mark price) ÷ mark price</strong>
+          <span>A transparent diagnostic, not a recommendation.</span>
+        </aside>
+      </section>
+
+      <section class="stats" aria-label="Market summary">
+        <article><span>Tracked products</span><strong id="stat-assets">8</strong><small>Official PreStocks API</small></article>
+        <article><span>Median absolute gap</span><strong id="stat-median">—</strong><small>Across current products</small></article>
+        <article><span>Large dislocations</span><strong id="stat-flags">—</strong><small>Absolute gap ≥ 20%</small></article>
+      </section>
+
+      <section class="market-panel">
+        <div class="panel-heading">
+          <div><p class="eyebrow">MARKET MAP</p><h2>Premium & discount monitor</h2></div>
+          <div class="controls">
+            <label><span>Find</span><input id="search" type="search" placeholder="Symbol or company" /></label>
+            <label><span>Sort</span><select id="sort"><option value="absolutePremium">Largest gap</option><option value="premium">Highest premium</option><option value="tokenPrice">Token price</option><option value="impliedValuation">Implied valuation</option></select></label>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Product</th><th>Token price</th><th>Mark price</th><th>Market gap</th><th>Implied value</th><th>Solana mint</th></tr></thead>
+            <tbody id="asset-rows"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="method">
+        <div><p class="eyebrow">WHY THIS EXISTS</p><h2>Make the issuer’s own data legible.</h2></div>
+        <div class="method-grid">
+          <article><strong>01</strong><h3>Official source</h3><p>Reads the public PreStocks product endpoint and keeps a dated fallback snapshot for resilient demos.</p></article>
+          <article><strong>02</strong><h3>Explainable signal</h3><p>Every flag comes from a visible formula. No black-box model and no invented forecast.</p></article>
+          <article><strong>03</strong><h3>Verifiable mints</h3><p>Every contract address links directly to Solscan for independent inspection.</p></article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>PreStocks Lens is an independent hackathon prototype. It does not execute trades or provide financial advice. PreStocks tokens may result in total loss and are unavailable to ineligible persons.</p>
+      <a href="https://prestocks.com/products" target="_blank" rel="noreferrer">Official product page ↗</a>
+    </footer>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
