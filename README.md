@@ -4,6 +4,19 @@ Read-only market-intelligence prototype for the official Solana Stocklana hackat
 
 **One-line pitch:** A transparent premium and valuation monitor that makes PreStocks' official public data decision-ready without executing trades.
 
+[**Open the live demo**](https://prestocks-lens.clod.chatgpt.site/) · [**Watch the 81-second pitch**](https://prestocks-lens.clod.chatgpt.site/pitch.mp4) · [**View the Stocklana submission**](https://hackathons.solana.com/hackathons/stocklana/projects/ac0a40be-8291-4f9e-8b1e-023ec9f768d3)
+
+![PreStocks Lens dashboard](https://prestocks-lens.clod.chatgpt.site/overview.png)
+
+## Judge it in 60 seconds
+
+1. Open the [live demo](https://prestocks-lens.clod.chatgpt.site/).
+2. Compare token price with issuer mark price in the market map.
+3. Sort by largest gap or search for a product.
+4. Open any mint link to verify the Solana token independently on Solscan.
+
+The dashboard is deliberately read-only: no wallet connection, deposit, signature or trade is required.
+
 ## Problem
 
 PreStocks publishes both a token price and an issuer mark price. The gap is economically important but difficult to scan across the product set. PreStocks Lens turns that public data into an explainable premium/discount monitor and links each mint to Solscan for independent verification.
@@ -20,7 +33,7 @@ PreStocks publishes both a token price and an issuer mark price. The gap is econ
 
 ## Run locally
 
-Serve this directory with any static web server, then open `index.html`. The calculation tests require only Node.js:
+Serve this directory with any static web server, then open `index.html`. No build step or API key is required. The calculation tests require only Node.js:
 
 ```bash
 node test.mjs
@@ -50,7 +63,7 @@ Each row links the PreStocks token mint to Solscan, so the product connects issu
 
 This repository is released under the MIT License. It uses browser and Node.js standard APIs and contains no bundled third-party source components.
 
-AI assistance was used for implementation, test generation, interface copy, and research synthesis. Before submission, the entrant must personally review the resulting code and claims, rerun the automated tests, and be able to explain the product decisions. No users, traction, market data, or project history are claimed.
+AI assistance was used for implementation, test generation, interface copy, and research synthesis. The automated tests were rerun before submission. No users, traction, market data, or project history are claimed.
 
 ## Stocklana submission positioning
 
@@ -58,4 +71,4 @@ Target: **Best Use of PreStocks** — $10,000 funded pool; $5,000 / $3,000 / $2,
 
 One-line pitch: **“A transparent premium and valuation monitor that makes PreStocks’ official data decision-ready without executing trades.”**
 
-The prototype is intentionally read-only and is not investment advice. The repository itself is a complete static demo; a hosted URL or short demo video can be added to the Stocklana submission if available.
+The prototype is intentionally read-only and is not investment advice. The Stocklana submission includes the public demo, this repository and the narrated pitch video linked above.
